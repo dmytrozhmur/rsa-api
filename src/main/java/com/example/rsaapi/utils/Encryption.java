@@ -27,7 +27,7 @@ public class Encryption {
             keyFactory = KeyFactory.getInstance(RSA);
             cipher = Cipher.getInstance(RSA);
             generator = KeyPairGenerator.getInstance(RSA);
-            generator.initialize(1024);
+            generator.initialize(2048);
             keyPair = generator.generateKeyPair();
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException(e.getMessage());
